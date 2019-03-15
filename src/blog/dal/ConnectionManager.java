@@ -28,7 +28,7 @@ import javax.servlet.ServletException;
  *   Navigate to the Connector/J JAR. On Windows, this looks something like:
  *   C:\Program Files (x86)\MySQL\Connector.J 5.1\mysql-connector-java-5.1.34-bin.jar
  *   B. If you already have a Java project created, then go to your project properties.
- *   Click on the "Java Build Path" option.
+ *   Click on the "Java Build Path" option. (choose file -> Project structure)
  *   Click on the "Libraries" tab, click on the "Add External Jars" button, and
  *   navigate to the Connector/J JAR.
  * 4. Update the "private final" variables below.
@@ -36,15 +36,15 @@ import javax.servlet.ServletException;
 public class ConnectionManager {
 
 	// User to connect to your database instance. By default, this is "root2".
-	private final String user = "root2";
+	private final String user = "root";
 	// Password for the user.
-	private final String password = "password";
+	private final String password = "admin";
 	// URI to your database server. If running on the same machine, then this is "localhost".
 	private final String hostName = "localhost";
 	// Port to your database server. By default, this is 3307.
 	private final int port= 3306;
 	// Name of the MySQL schema that contains your tables.
-	private final String schema = "BlogApplication";
+	private final String schema = "ReviewApplication";
 
 	/** Get the connection to the database instance. */
 	public Connection getConnection() throws SQLException {
